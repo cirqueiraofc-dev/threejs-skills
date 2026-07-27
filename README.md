@@ -40,6 +40,7 @@ git submodule add https://github.com/pinkforest/threejs-playground.git
 | **threejs-postprocessing** | EffectComposer, bloom, DOF, screen effects, custom passes               |
 | **threejs-interaction**    | Raycasting, camera controls, mouse/touch input, object selection        |
 | **threejs-blender-unity**  | Blender/Unity → Three.js pipelines, glTF export, coordinate conversion  |
+| **threejs-handpainted-style** | Warcraft 3-style hand-painted look, baked lighting, toon shading, team colors |
 
 ## How It Works
 
@@ -50,6 +51,7 @@ Claude Code automatically loads skill files from the `.claude/skills` directory 
 - Load a GLTF model → `threejs-loaders` is loaded
 - Create custom visual effects → `threejs-shaders` and `threejs-postprocessing` are loaded
 - Export a model from Blender or Unity → `threejs-blender-unity` is loaded
+- Create a stylized hand-painted game look → `threejs-handpainted-style` is loaded
 
 ## Usage Examples
 

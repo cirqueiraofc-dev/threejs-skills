@@ -298,3 +298,4 @@ gltf-transform inspect model.glb   # meshes, materials, textures, animations, si
 - `threejs-animation` - Playing and blending exported animation clips
 - `threejs-materials` - MeshStandardMaterial / MeshPhysicalMaterial details
 - `threejs-lighting` - Environment lighting (IBL) for PBR assets
+- `threejs-handpainted-style` - Stylized hand-painted assets (baked lighting, no PBR)
