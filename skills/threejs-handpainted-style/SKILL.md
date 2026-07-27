@@ -145,6 +145,42 @@ grunt.material = makeTeamColorMaterial(diffuse, mask, RED_PLAYER);
 
 Author the mask in Blender as a second grayscale image: paint white over tabards, banners, armor trim.
 
+## Asset Spec Sheet (per unit)
+
+Before modeling, write a one-page spec per asset — the discipline behind consistent WC3-quality sets. Example, matching the classic Footman:
+
+```
+UNIT: Footman            CLASS: Human - Melee Unit
+Triangles (target):      800-1200 (hero units up to 2000)
+Texture size:            256x256 (authentic) / 512x512 (modern crisp)
+Texture style:           Hand Painted, lighting baked in
+Poly style:              Low Poly, strong silhouette
+Camera:                  RTS top-down (~55-60 degrees)
+Style reference:         Warcraft III (Classic)
+
+DELIVERABLES
+- [ ] Mesh (GLB, Y-up, applied modifiers)
+- [ ] Diffuse texture (sRGB PNG)
+- [ ] Team color mask (grayscale PNG: tabard, shield crest, trim)
+- [ ] Animations: Stand, Walk, Attack (x2), Death, Stand Victory
+- [ ] Portrait icon (256x256, painted, 3/4 face view)
+
+COLOR PALETTE (pick 8-10 swatches BEFORE painting)
+- Primary:    2-3 team-color blues (or masked areas)
+- Accent:     1-2 golds for trim and crest
+- Materials:  2-3 steel grays, 2 leather browns
+- Rule:       gold trim outlines every team-color area for readability
+```
+
+Spec rules that keep a whole unit set coherent:
+
+- **Fixed triangle budgets per class**: worker 400-700, infantry 800-1200, hero 1500-2500, building 1000-2000
+- **Same texture size per class** - mixing 256 and 1024 units side by side breaks the visual unity
+- **Palette is decided before painting** - sample swatches from your faction's key art; every unit reuses them
+- **Model to the camera**: detail the top of shoulders, pauldrons, and head; leave soles and chin flat
+- **Icon is part of the asset** - a painted portrait icon (not a screenshot) for HUD/selection UI
+- **Reference sheet per asset** - front/side/back views plus weapons; this doubles as your Blender modeling reference (Front/Right orthographic backgrounds)
+
 ## Painting the Textures (Blender Workflow)
 
 The asset pipeline (pairs with `threejs-blender-unity`):
