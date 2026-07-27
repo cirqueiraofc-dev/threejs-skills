@@ -39,6 +39,7 @@ git submodule add https://github.com/pinkforest/threejs-playground.git
 | **threejs-shaders**        | GLSL basics, ShaderMaterial, uniforms, custom effects                   |
 | **threejs-postprocessing** | EffectComposer, bloom, DOF, screen effects, custom passes               |
 | **threejs-interaction**    | Raycasting, camera controls, mouse/touch input, object selection        |
+| **threejs-blender-unity**  | Blender/Unity → Three.js pipelines, glTF export, coordinate conversion  |
 
 ## How It Works
 
@@ -48,6 +49,7 @@ Claude Code automatically loads skill files from the `.claude/skills` directory 
 - Add lighting and shadows → `threejs-lighting` is loaded
 - Load a GLTF model → `threejs-loaders` is loaded
 - Create custom visual effects → `threejs-shaders` and `threejs-postprocessing` are loaded
+- Export a model from Blender or Unity → `threejs-blender-unity` is loaded
 
 ## Usage Examples
 
@@ -74,6 +76,14 @@ Ask Claude Code:
 > "Create a custom shader material with a fresnel effect"
 
 Claude Code will use `threejs-shaders` to generate working GLSL code with proper uniform declarations and coordinate space handling.
+
+### Blender/Unity Asset Pipeline
+
+Ask Claude Code:
+
+> "Export my Blender character to Three.js with animations and set up the loading code"
+
+Claude Code will use `threejs-blender-unity` to configure the glTF export (correct axis conversion, NLA animation tracks, Draco compression) and generate the matching `GLTFLoader` setup.
 
 ## Skill File Structure
 
