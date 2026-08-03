@@ -2,6 +2,11 @@
 
 A curated collection of Three.js skill files that provide Claude Code with foundational knowledge for creating 3D elements and interactive experiences.
 
+> **Also in this repository:** [`contratos-rt/`](contratos-rt/) — Sistema de Contratos e RT, a
+> standalone web app for tracking engineering contracts, their required ARTs/RTs (elétrica, civil,
+> refrigeração, mecânica) and generating the CAT paperwork. Unrelated to the Three.js skills below;
+> see [`contratos-rt/README.md`](contratos-rt/README.md).
+
 ## Purpose
 
 When working with Three.js, Claude Code starts with general programming knowledge but lacks specific Three.js API details, best practices, and common patterns. These skill files bridge that gap by providing:
